@@ -1,5 +1,5 @@
 # Start your image with a node base image
-FROM node:18-alpine
+FROM node:21-alpine3.19
 
 # The /app directory should act as the main application directory
 WORKDIR /app
@@ -11,12 +11,9 @@ COPY package*.json ./
 COPY ./src ./src
 COPY ./public ./public
 
-# Install yarn
-RUN npm install --global yarn
-
 # Install node packages, install serve, build the app, and remove dependencies at the end
 RUN yarn install \
-    && yarn add -g serve \
+    && npm install -g serve \
     && yarn run build \
     && rm -fr node_modules
 

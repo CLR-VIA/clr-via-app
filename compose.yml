@@ -1,0 +1,18 @@
+
+services:
+  codename-cv:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/app # Mount the project directory as a volume
+    command: yarn dev # Start the development server with hot reloading
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: .
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json

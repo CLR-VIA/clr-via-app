@@ -11,7 +11,7 @@ import NoPage from './pages/NoPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
+    <Route path='/'>
       <Route index element={<Home />} />
       <Route path="login" element={<Login />} />
       <Route path='register' element={<Register />} />

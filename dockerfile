@@ -24,7 +24,7 @@ COPY . .
 # Install node packages
 RUN yarn install
 
-EXPOSE 3000
+EXPOSE 8080
 
-# # Start the app with hot reload
-# CMD [ "yarn", "run", "dev" ]
+# Start the app with hot reload
+CMD [ "yarn", "run", "dev" ]

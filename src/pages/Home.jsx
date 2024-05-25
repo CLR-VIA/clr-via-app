@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../components/nav/appbar';
 import TestButton from '../components/TestButton';
-import Layout from '../components/nav/Layout';
 
 const Home = () => {
   return (
     <div className='App'>
-      <Layout/>
+      {/* Include the Navbar component */}
+      <Navbar />
+      {/* Main content header */}
       <h1>Home</h1>
-      <TestButton>Button</TestButton>
+      <p>This page is a work in progress.</p>
     </div>
   );
 };
 
-export default Home;
+// Export the Home component as the default export
+export default Home; 

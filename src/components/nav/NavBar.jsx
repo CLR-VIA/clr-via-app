@@ -9,8 +9,9 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { Drawer, List, ListItem, ListItemText, ListItemButton } from "@mui/material";
 import { Link } from "react-router-dom";
+import logo from '../../assets/clr-via.webp';
 
 const Navbar = () => {
   // State to manage the menu anchor element
@@ -63,22 +64,21 @@ const Navbar = () => {
             onKeyDown={toggleDrawer(false)}
           >
             <List>
-              <ListItem button component={Link} to="/login">
+              <ListItemButton component={Link} to="/login">
                 <ListItemText primary="Login" />
-              </ListItem>
-              <ListItem button component={Link} to="/register">
+              </ListItemButton>
+              <ListItemButton component={Link} to="/register">
                 <ListItemText primary="Sign-up" />
-              </ListItem>
+              </ListItemButton>
             </List>
           </Box>
         </Drawer>
         {/* Container for logo / title with flex display */}
         <Box display="flex" alignItems="center" flexGrow={1}>
-          {/* Add logo if needed
-          <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '16px' }} /> */}
+          <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '16px' }} />
           {/* Title */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Codename-cv
+            CLR VIA
           </Typography>
           {/* Navigation buttons (hidden on small screens) */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>

@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from '../components/nav/appbar';
-import TestButton from '../components/TestButton';
+import Navbar from '../components/nav/NavBar';
 
 const Home = () => {
   return (

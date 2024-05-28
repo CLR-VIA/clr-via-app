@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../components/nav/NavBar';
+import CopyrightFooter from '../components/CopyrightFooter';
+import HomeButton from '../components/HomeButton';
 
 const Home = () => {
   return (
@@ -9,6 +11,7 @@ const Home = () => {
       {/* Main content header */}
       <h1>Home</h1>
       <p>This page is a work in progress.</p>
+      <CopyrightFooter/>
     </div>
   );
 };

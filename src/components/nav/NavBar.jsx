@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer, List, ListItem, ListItemText, ListItemButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import logo from '../../assets/clr-via.webp';
+import HomeButton from '../HomeButton';
 
 const Navbar = () => {
   // State to manage the menu anchor element
@@ -75,7 +76,7 @@ const Navbar = () => {
         </Drawer>
         {/* Container for logo / title with flex display */}
         <Box display="flex" alignItems="center" flexGrow={1}>
-          <img src={logo} alt="Logo" style={{ height: '40px', marginRight: '16px' }} />
+          <HomeButton/> {/* TODO: Fix this, it is not centered */}
           {/* Title */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             CLR VIA

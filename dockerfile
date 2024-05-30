@@ -12,8 +12,8 @@ COPY . .
 
 # # Install node packages, install serve, build the app, and remove dependencies at the end
 # RUN yarn install \
-#     && npm install -g serve \
-#     && yarn dev \
+#     && yarn global add serve \
+#     && yarn build \
 #     && rm -fr node_modules
 
 # EXPOSE 3000
@@ -25,6 +25,3 @@ COPY . .
 RUN yarn install
 
 EXPOSE 8080
-
-# Start the app with hot reload
-CMD [ "yarn", "run", "dev" ]

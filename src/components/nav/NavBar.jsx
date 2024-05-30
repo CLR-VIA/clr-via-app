@@ -13,6 +13,7 @@ import { Drawer, List, ListItem, ListItemText, ListItemButton } from "@mui/mater
 import { Link } from "react-router-dom";
 import logo from '../../assets/clr-via.webp';
 import HomeButton from '../HomeButton';
+import DarkModeToggle from '../DarkModeTog';
 
 const Navbar = () => {
   // State to manage the menu anchor element
@@ -66,12 +67,19 @@ const Navbar = () => {
           >
             <List>
               <ListItemButton component={Link} to="/login">
+                {/* Login botton */}
                 <ListItemText primary="Login" />
               </ListItemButton>
               <ListItemButton component={Link} to="/register">
+                {/* Sign up botton */}
                 <ListItemText primary="Sign-up" />
               </ListItemButton>
             </List>
+            <Box sx={{ p: 2 }}>
+               {/* Dark Mode Switch, placed in seperate box so it can display at bottom
+               of drawer*/}
+              <DarkModeToggle />
+            </Box>
           </Box>
         </Drawer>
         {/* Container for logo / title with flex display */}
@@ -88,7 +96,7 @@ const Navbar = () => {
           </Box>
         </Box>
         {/* Responsive menu */}
-        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+        <Box sx={{ display: { xs: "flex", md: "none"} }}>
           <IconButton
             size="large"
             edge="start"

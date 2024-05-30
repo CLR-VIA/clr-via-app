@@ -5,11 +5,13 @@ import logo from '../assets/clr-via.webp';
 
 function HomeButton(props) {
     return (
-        <IconButton size='large'>
-            <Link to="/" component={RouterLink}>
-                <img src={logo} alt="Logo" style={{height: '50px', justifyContent: 'center'}}/>
-            </Link>
-        </IconButton>
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100%"}}>
+            <IconButton size='large'>
+                <Link to="/" component={RouterLink}>
+                    <img src={logo} alt="Logo" style={{height: '50px'}}/>
+                </Link>
+            </IconButton>
+        </div>
     );
 }
 

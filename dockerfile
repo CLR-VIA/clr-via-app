@@ -23,5 +23,3 @@ COPY . .
 
 # Install node packages
 RUN yarn install
-
-EXPOSE 8080
